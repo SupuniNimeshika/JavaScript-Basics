@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <title>Object Constructor</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+        
+        function book(title,author){
+            this.title=title;
+            this.author=author;
+        }
+
+        var myBook = new book("PHP","Aatef");
+        document.write("The name of book is:" +myBook.title+"<br>");
+        document.write("The name of Author is:" +myBook.author+"<br>");        </script>
+    </body>
+</html>

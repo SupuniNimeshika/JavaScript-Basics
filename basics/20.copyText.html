@@ -1,0 +1,21 @@
+<html>
+        <head>
+            <title>Copy Text Project</title>
+        </head>
+    
+        <body>
+            
+                <input type="text" style="color:lightyellow;background-color:black" id="field1" 
+                value="Good Morning"> 
+                <input type="text" style="color:lightyellow;background-color:black" id="field2" 
+                value="Good Morning">
+                <button style="background-color: lightgreen" onclick="copy()">Click to copy text</button>
+             
+            <script type="text/javascript">
+
+            function copy(){
+                document.getElementById('field1').value=document.getElementById('field2').value;
+            }
+            </script>
+        </body>
+</html>

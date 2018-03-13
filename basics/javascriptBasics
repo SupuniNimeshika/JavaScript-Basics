@@ -1,0 +1,233 @@
+﻿1. BASIC JAVASCRIPT HOW TO ADD INLINE CSS
+
+<script type ="text/javascript">
+        document.write("<h1 style =\" color:magenta\">");
+        document.write ("Welcome to Javasript Progamming!</h1>");
+        document.writeln("<h1>My name is Supuni!</h1>");
+</script>
+
+2.DISPALYING TEXT IN AN ALERT DIALOG
+
+
+window.alert("Welcome to \n Javascript \n Programming!");
+
+
+3.OBTAINING USER INPUT WITH PROMPT DIALOG
+
+<script type="text/javascript">
+
+        var name;
+        name =window.prompt("Please enter your name:");
+
+        document.writeln("<h1>Hello;"+name+ ", Welcome to Javascript Programme</h1>"); 
+</script>
+
+
+4. ADDING INTEGER
+
+<script type="text/javascript">
+
+        var firstNumber;
+        var secondNumber;
+        var number1;
+        var number2;
+        var sum;
+
+        firstNumber =window.prompt("Enter first interger");
+        secondNumber=window.prompt("Enter second interger");
+
+        number1=parseInt(firstNumber);
+        number2=parseInt(secondNumber);
+
+        sum=number1+number2;
+
+        document.writeln("<h1>The sum is:" +sum+ "</h1>")        
+</script>
+
+
+
+4. DISPAY GREETING MSG ACCORDING TO CURRENT TIME
+
+<script type="text/javascript">
+
+        var name;
+        var now=new Date();//curent date and time
+        var hour=now.getHours();//get hours
+
+        name=window.prompt("Please enter your name:");
+
+        if(hour<12){
+            document.write("<h1> Good Morning,");
+
+            if(hour>=12){
+                hour=hour-12;
+                if(hour<6)
+                    document.write("<h1> Good Afternoon,");
+
+                if(hour>=6)
+                    document.write("<h1> Good Evening,");
+            }
+            document.writeln(name+", Welcome to Javascript Programming!</h1>");
+        }        
+</script>
+
+5. CLASS AVERAGE PROGRAMME
+
+<script type="text/javascript">
+
+        var total; //sum of grades
+        var gradeCounter; // number of grades entered
+        var grade;
+        var gradeValue;
+        var average;
+
+        total = 0;
+        gradeCounter=1;
+
+        while (gradeCounter<=3){
+            grade=window.prompt("Enter integer Subject Marks:","0");
+            gradeValue=parseInt(grade);
+            total=total+gradeValue;
+            gradeCounter=gradeCounter+1;
+        } 
+        average=total/33;
+
+        document.writeln("<h1>Class average is " +average+"</h1>");     
+</script>
+
+6. LOOP CONTROL
+
+<script type ="text/javascript">
+            var x;
+            for(x=0;x<10;x++){
+                if(x==5)
+                    continue;
+
+                if(x==8)
+                    break;
+
+            document.write(x+"<br>");
+            }
+</script>
+output===> 0,1,2,3,4,6,7
+
+7.ONCLICK FUNCTION
+
+<html>
+    <head>
+        <title>OnClick Function</title>
+
+        <script type ="text/javascript">
+            function sayHello(){
+                document.write("Hello There");
+            }
+        </script>
+    </head>
+
+    <body>
+        <form>
+            <input type="button" onclick="sayHello()" value="Say Hello">
+        </form>
+
+    </body>
+</html>
+
+8. VARIABLES
+
+<body>
+        <p id ="price"></p>
+
+        <script type="text/javascript">
+
+        var price1=5;
+        var price2=6;
+        var total=price1+price2;
+
+        document.getElementById("price").innerHTML="Total is" +total;        
+        </script>
+</body>
+
+9. IF-ELSE STATEMENT
+
+<body>
+        <p id ="demo"></p>
+
+        <script type="text/javascript">
+
+        var age=window.prompt("Enter your age:");
+        var ageResult=parseInt(age);
+        if(ageResult==20){
+            document.getElementById("demo").innerHTML="The age is 20";
+        }
+        else if(ageResult<20){
+            document.getElementById("demo").innerHTML="The age is lower than 20";
+        }
+        else{
+            document.getElementById("demo").innerHTML="The age is higher than 20";
+        }
+
+        </script>
+</body>
+
+10. SWITCH STATEMENT
+
+<script type="text/javascript">
+
+        var grade=window.prompt("Enter your grade:");
+        
+
+        switch(grade){
+            case "A":document.write("Good Job");break;
+            case "B":document.write("Good");break;
+            case "C":document.write("Try and practice");break;
+            case "D":document.write("Not Good");break;
+            case "F":document.write("Failed");break;
+            default :document.write("Type correct grade");break;
+        }       
+</script>
+
+11. WHILE LOOP
+
+var =number=1;
+do{
+        document.write("Number:"+number+"<br/>");
+        number++;
+}while(number<=20); 
+
+12 FOR IN LOOP// search about this
+
+<script type="text/javascript">
+
+        var browsers;
+
+        document.write("Name of browsers in Navigator Object:");
+
+        for(browsers in navigator){//navigator is the object
+            document.write("<br>");
+            document.write(browsers);
+            document.write("<br>");
+        }
+</script>
+
+13. ON CHANGE EVENT
+
+<body>
+        <p>Select a new car from the list</p>
+
+        <select id ="mySelect" onchange="myFunction()">
+            <option value="Audi">Audi</option>
+            <option value="BMW">BMW</option>
+            <option value="Mercedes">Mercedes</option>
+            <option value="Volvo">Volvo</option>
+        </select>
+
+        <p id="demo"></p>
+        <script type="text/javascript">
+
+        function myFunction(){
+            var x=document.getElementById("mySelect").value;
+            document.getElementById("demo").innerHTML="You Selected: " +x;        }
+        
+        </script>
+</body>
+

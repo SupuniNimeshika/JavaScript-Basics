@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>An Addition  Programme</title>
+        <script type="text/javascript">
+
+        var total; //sum of grades
+        var gradeCounter; // number of grades entered
+        var grade;
+        var gradeValue;
+        var average;
+
+        total = 0;
+        gradeCounter=1;
+
+        while (gradeCounter<=3){
+            grade=window.prompt("Enter integer Subject Marks:","0");
+            gradeValue=parseInt(grade);
+            total=total+gradeValue;
+            gradeCounter=gradeCounter+1;
+        } 
+        average=total/33;
+
+        document.writeln("<h1>Class average is " +average+"</h1>");     
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>

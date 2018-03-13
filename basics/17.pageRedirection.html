@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>Page Redirection</title>
+    </head>
+
+    <body>
+        <form>
+            <input type="button" onclick="Redirect()" value="Redirect Me">
+        </form>
+        
+        <script type="text/javascript">
+
+        function Redirect(){
+            window.location="http:www.google.com";
+        }
+
+        document.write("You will direct to main page in 5se");
+        setTimeout('Redirect()',5000);
+                
+        </script>
+    </body>
+</html>

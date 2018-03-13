@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>Dial Boxes</title>
+    </head>
+
+    <body>
+        <form>
+            <input type="button" onclick="warn()" value="Alert">
+            <br><br>
+            <input type="button" onclick="getConfirmation()" value="Confirmation">
+            <br><br>
+            <input type="button" onclick="getValue()" value="Prompt Box">
+            <br><br>
+        </form>
+
+        <script type="text/javascript">
+        
+        function warn(){
+            alert("This is warning message");
+            document.write("fix your warning message");
+        }
+
+        function getConfirmation(){
+            var conf=confirm("Do you want to continue");
+
+            if(conf==true){
+                document.write("User want to continue");
+                return true;
+            }
+            else{
+                document.write("User does not want to continue");
+                return false;
+            }
+        }
+
+        function getValue(){
+            var getVal = prompt("Enter your name","your name here");
+            document.write("You have entered:" +getVal);        }
+        </script>
+    </body>
+</html>
